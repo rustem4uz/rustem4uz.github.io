@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой продукт</title>
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Стили для заголовка */
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Стили для секции особенностей */
+        .features {
+            background-color: #ffffff;
+            padding: 50px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Стили для секции отзывов */
+        .testimonials {
+            background-color: #f1f1f1;
+            padding: 50px 0;
+        }
+
+        .testimonials blockquote {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .testimonials footer {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Стили для формы */
+        .contact-form {
+            background-color: #ffffff;
+            padding: 50px 0;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form label {
+            font-size: 1em;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Стили для подвала */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .feature-item {
+                margin-bottom: 20px;
+            }
+
+            .testimonials blockquote {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Продукт, который изменит вашу жизнь</h1>
+            <p>Откройте для себя новые возможности с нашим уникальным продуктом.</p>
+            <a href="#contact" class="cta-button">Запросить информацию</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Наши особенности</h2>
+            <div class="feature-item">
+                <h3>Удобство</h3>
+                <p>Легко использовать и быстро интегрировать в повседневную жизнь.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Качество</h3>
+                <p>Лучшие материалы и современные технологии.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Доступность</h3>
+                <p>Приятные цены и гибкая система скидок.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Отзывы клиентов</h2>
+            <blockquote>
+                <p>"Этот продукт изменил мою жизнь! Я не могу без него обойтись."</p>
+                <footer>- Иван Иванов</footer>
+            </blockquote>
+            <blockquote>
+                <p>"Просто потрясающий! Рекомендую всем."</p>
+                <footer>- Анна Смирнова</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-form">
+        <div class="container">
+            <h2>Связаться с нами</h2>
+            <form action="#" method="post">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="cta-button">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мой продукт. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
